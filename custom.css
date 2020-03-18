@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Gravitas+One|Montserrat|Knewave&display=swap');
 .menu {
-  padding-bottom: 100px;
+  flex: 1 1 auto;
+}
+.footer {
+  flex: 0 1 40px;
+}
+.jumbotron {
+  background-image: url("./img/menu.png");
+  background-size: cover;
+}
+.menuborder {
+  font-family:'Knewave', cursive;
+  /* color:#FFC30B; */
+  font-size:80px;
+  flex: 0 1 auto;
+}
+.mealtitle {
+  font-family:'Knewave', cursive;
+  /* color:#FFC30B; */
+  font-size:20px;
+}
+.affix {
+  font-family:'Montserrat';
+}
+.days {
+  font-family:'Montserrat';
+}
+
+a:link {
+  color : white;
+}
+a:hover {
+  text-decoration-style: wavy;
 }
