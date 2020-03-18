@@ -2,31 +2,29 @@
 <html>
   <head>
     <title>Cap Menu </title>
-
+    {% load static %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="custom.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'meals/custom.css' %}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
 
   <body>
-    <div class = "jumbotron">
-      <center>
-        <font color = white>
-          <p class = "menuborder">
-            MENU
-          </p>
-          <p class = "days">
-            <a href = "/monday"> MON </a>
-            &ensp;&ensp;
-            <a href = "/tuesday"> TUE </a>
-            &ensp;&ensp;
-            <a href = "/wednesday"> WED </a>
-            &ensp;&ensp;
-            <a href = "/thursday"> THUR </a>
-            &ensp;&ensp;
-            <a href = "/friday"> FRI </a>
-          </p>
+    <div class = "image">
+      <div class = "heading">
+        <p class = "title"> MENU </p>
+        <p class = "days">
+          <a href = "/meals/0"> MON </a>
+          &ensp;&ensp;
+          <a href = "/meals/1"> TUE </a>
+          &ensp;&ensp;
+          <a href = "/meals/2"> WED </a>
+          &ensp;&ensp;
+          <a href = "/meals/3"> THUR </a>
+          &ensp;&ensp;
+          <a href = "/meals/4"> FRI </a>
+        </p>
+      </div>
           <p>
           <!-- <p class = "hours">
             <strong> Breakfast: </strong>8AM - 10AM
@@ -34,8 +32,6 @@
             <br> <strong> Lunch: </strong>11:30AM - 1:30 PM
             <br> <strong> Dinner: </strong> 6PM - 8PM
           </p> -->
-        </font>
-      </center>
     </div>
     <div class = "menu">
       <div class = "container">
@@ -44,10 +40,9 @@
             <p class = "mealtitle"> LUNCH </class>
             <div class = "affix">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Deep Dish Pizza</li>
-                <li class="list-group-item">Chicken Fingers</li>
-                <li class="list-group-item">Salad</li>
-                <li class="list-group-item">Yummy</li>
+                {% for item in lunch_list %}
+                  <li class="list-group-item">{{item.item}}</li>
+                {% endfor %}
               </ul>
             </div>
           </div>
@@ -57,22 +52,25 @@
             <p class = "mealtitle"> DINNER </class>
             <div class = "affix">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Deep Dish Pizza</li>
-                <li class="list-group-item">Chicken Fingers</li>
-                <li class="list-group-item">Salad</li>
+                {% for item in dinner_list %}
+                  <li class="list-group-item">{{item.item}}</li>
+                {% endfor %}
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <footer class = "footer">
+    <footer class = "footer">
       <div class = "container">
         <center>
           <small> Cap Menus Developed by Dora Zhao ('21) </small>
         </center>
       </div>
-    </footer> -->
+    </footer>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="js/menu.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
