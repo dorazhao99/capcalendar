@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cap Menu </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #800000; opacity:0.8">
+      <a class="navbar-brand" href="#"><font color = white> Cap & Gown </font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Update
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Add Item</a>
+              <a class="dropdown-item" href="#">Add Day</a>
+              <a class="dropdown-item" href="#">Add Week</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <form>
+      <div class = "dayview">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Day of the Week</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+          </select>
+        </div>
+        <div class = "form-group">
+          <label for="lunch"> Lunch </label>
+          <input type="text" class="form-control" id="lunchitem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="lunchitem2" placeholder="Item Name">
+          <button type="button" class="btn btn-outline-dark" id="add">Add More</button>
+        </div>
+        <div class = "form-group">
+          <label for="dinner"> Dinner </label>
+          <input type="text" class="form-control" id="dinneritem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem2" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem3" placeholder="Item Name">
+          <button type="button" class="btn btn-outline-dark" id="add">Add More</button>
+        </div>
+      </div>
+      <!-- <div class = "weekview">
+        <p class = "dayofweek"> MONDAY </p>
+        <div class = "form-group">
+          <label for="lunch"> Lunch </label>
+          <input type="text" class="form-control" id="lunchitem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="lunchitem2" placeholder="Item Name">
+        </div>
+        <div class = "form-group">
+          <label for="dinner"> Dinner </label>
+          <input type="text" class="form-control" id="dinneritem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem2" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem3" placeholder="Item Name">
+        </div>
+        <p class = "dayofweek"> TUESDAY </p>
+        <div class = "form-group">
+          <label for="lunch"> Lunch </label>
+          <input type="text" class="form-control" id="lunchitem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="lunchitem2" placeholder="Item Name">
+          <input type="text" class="form-control" id="lunchitem3" placeholder="Item Name">
+        </div>
+        <div class = "form-group">
+          <label for="dinner"> Dinner </label>
+          <input type="text" class="form-control" id="dinneritem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem2" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem3" placeholder="Item Name">
+        </div>
+        <p class = "dayofweek"> TUESDAY </p>
+        <div class = "form-group">
+          <label for="lunch"> Lunch </label>
+          <input type="text" class="form-control" id="lunchitem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="lunchitem2" placeholder="Item Name">
+        </div>
+        <div class = "form-group">
+          <label for="dinner"> Dinner </label>
+          <input type="text" class="form-control" id="dinneritem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem2" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem3" placeholder="Item Name">
+        </div>
+        <p class = "dayofweek"> WEDNESDAY </p>
+        <div class = "form-group">
+          <label for="lunch"> Lunch </label>
+          <input type="text" class="form-control" id="lunchitem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="lunchitem2" placeholder="Item Name">
+        </div>
+        <div class = "form-group">
+          <label for="dinner"> Dinner </label>
+          <input type="text" class="form-control" id="dinneritem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem2" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem3" placeholder="Item Name">
+        </div>
+        <p class = "dayofweek"> THURSDAY </p>
+        <div class = "form-group">
+          <label for="lunch"> Lunch </label>
+          <input type="text" class="form-control" id="lunchitem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="lunchitem2" placeholder="Item Name">
+        </div>
+        <div class = "form-group">
+          <label for="dinner"> Dinner </label>
+          <input type="text" class="form-control" id="dinneritem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem2" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem3" placeholder="Item Name">
+        </div>
+        <p class = "dayofweek"> FRIDAY </p>
+        <div class = "form-group">
+          <label for="lunch"> Lunch </label>
+          <input type="text" class="form-control" id="lunchitem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="lunchitem2" placeholder="Item Name">
+          <input type="text" class="form-control" id="lunchitem3" placeholder="Item Name">
+        </div>
+        <div class = "form-group">
+          <label for="dinner"> Dinner </label>
+          <input type="text" class="form-control" id="dinneritem1" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem2" placeholder="Item Name">
+          <input type="text" class="form-control" id="dinneritem3" placeholder="Item Name">
+        </div>
+      </div> -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <footer class = "footer">
+      <div class = "container">
+        <center>
+          <small> Cap Menus Developed by Dora Zhao ('21) </small>
+        </center>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+          //@naresh action dynamic childs
+          var next = 0;
+          $("#add").click(function(e){
+              e.preventDefault();
+              var addto = "#field" + next;
+              var addRemove = "#field" + (next);
+              next = next + 1;
+              var newIn = ' <div id="field'+ next +'" name="field'+ next +'"><!-- Text input--><div class="form-group"> <label class="col-md-4 control-label" for="action_id">Action Id</label> <div class="col-md-5"> <input id="action_id" name="action_id" type="text" placeholder="" class="form-control input-md"> </div></div><br><br> <!-- Text input--><div class="form-group"> <label class="col-md-4 control-label" for="action_name">Action Name</label> <div class="col-md-5"> <input id="action_name" name="action_name" type="text" placeholder="" class="form-control input-md"> </div></div><br><br><!-- File Button --> <div class="form-group"> <label class="col-md-4 control-label" for="action_json">Action JSON File</label> <div class="col-md-4"> <input id="action_json" name="action_json" class="input-file" type="file"> </div></div></div>';
+              var newInput = $(newIn);
+              var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >Remove</button></div></div><div id="field">';
+              var removeButton = $(removeBtn);
+              $(addto).after(newInput);
+              $(addRemove).after(removeButton);
+              $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+              $("#count").val(next);
+
+                  $('.remove-me').click(function(e){
+                      e.preventDefault();
+                      var fieldNum = this.id.charAt(this.id.length-1);
+                      var fieldID = "#field" + fieldNum;
+                      $(this).remove();
+                      $(fieldID).remove();
+                  });
+          });
+
+      });
+    </script>
+  </body>
+
+</html>

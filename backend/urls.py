@@ -16,7 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+import django_cas_ng.views
+import meals.views as views
+
 urlpatterns = [
+    path('', views.index, name='home'),
+    path('staff/additem/', views.add_item, name='add_item'),
     path('admin/', admin.site.urls),
     path('meals/', include('meals.urls')),
+    path('accounts/login', django_cas_ng.views.LoginView.as_view(), name='cas_ng_login'),
+    path('accounts/logout', django_cas_ng.views.LogoutView.as_view(), name='cas_ng_logout'),
 ]

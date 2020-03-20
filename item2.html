@@ -20,62 +20,52 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Update</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Update
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Add Item</a>
+              <a class="dropdown-item" href="#">Add Day</a>
+              <a class="dropdown-item" href="#">Add Week</a>
+            </div>
           </li>
         </ul>
       </div>
     </nav>
-    <div class = "jumbotron jumbotron-fluid">
-      <center>
-        <h2> <i> MENU </i> </h2>
-        MON
-        &ensp;&ensp;
-        TUE
-        &ensp;&ensp;
-        WED
-        &ensp;&ensp;
-        THUR
-        &ensp;&ensp;
-        FRI
-        <p>
-        <p>
-          <strong> Breakfast: </strong>8AM - 10AM
-          <br> <strong> Brunch (Sat & Sun only): </strong>11:30AM - 1:30 PM
-          <br> <strong> Lunch: </strong>11:30AM - 1:30 PM
-          <br> <strong> Dinner: </strong> 6PM - 8PM
-        </p>
-      </center>
-    </div>
-    <div class = "menu">
-      <div class = "container">
-        <div class="row align-items-start" >
-          <div class="col-sm-5">
-            <h5> LUNCH </h5>
-            <div class = "affix">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Deep Dish Pizza</li>
-                <li class="list-group-item">Chicken Fingers</li>
-                <li class="list-group-item">Salad</li>
-                <li class="list-group-item">Yummy</li>
-              </ul>
-            </div>
+    <form>
+      <div class = "dayview">
+        <div class="form-group">
+          <label for="dayofweek">Day of the Week</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+          </select>
+        </div>
+        <div class = "form-group">
+          <label for="mealtype"> Meal </label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="mealsRadios" id="lunchRadio" value="option1">
+            <label class="form-check-label" for="lunchRadio">
+              Lunch
+            </label>
           </div>
-          <div class="col-sm-2">
-          </div>
-          <div class="col-sm-5">
-            <h5> DINNER </h5>
-            <div class = "affix">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Deep Dish Pizza</li>
-                <li class="list-group-item">Chicken Fingers</li>
-                <li class="list-group-item">Salad</li>
-              </ul>
-            </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="mealsRadios" id="dinnerRadio" value="option2">
+            <label class="form-check-label" for="dinnerRadio">
+              Dinner
+            </label>
           </div>
         </div>
-      </div>
-    </div>
+        <div class = "form-group">
+          <label for="dinner"> Item </label>
+          <input type="text" class="form-control" id="dinneritem1" placeholder="Item Name">
+        </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     <footer class = "footer">
       <div class = "container">
         <center>
@@ -86,6 +76,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </body>
 
 </html>
