@@ -57,9 +57,13 @@ AUTHENTICATION_BACKENDS = (
     'django_cas_ng.backends.CASBackend',
 )
 
+# for testing
+CAS_SERVER_URL = 'https://django-cas-ng-demo-server.herokuapp.com/cas/'
+CAS_VERSION = '3'
+
 # for CAS Authentication
-CAS_SERVER_URL = 'https://fed.princeton.edu/cas/'
-CAS_CREATE_USER = False
+# CAS_SERVER_URL = 'https://fed.princeton.edu/cas/'
+# CAS_CREATE_USER = False
 
 ROOT_URLCONF = 'backend.urls'
 

@@ -22,6 +22,9 @@ import meals.views as views
 urlpatterns = [
     path('', views.index, name='home'),
     path('staff/additem/', views.add_item, name='add_item'),
+    path('staff/meals/', views.staff_current_day, name='current_staff_meals'),
+    path('staff/meals/<int:day>', views.staff_meals, name='staff_meals'),
+    path('staff/edititem/<int:day>/<int:meal>', views.edit_item, name='edit_item'),
     path('admin/', admin.site.urls),
     path('meals/', include('meals.urls')),
     path('accounts/login', django_cas_ng.views.LoginView.as_view(), name='cas_ng_login'),
