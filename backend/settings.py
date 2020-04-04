@@ -49,17 +49,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_cas_ng.middleware.CASMiddleware',
+    # 'django_cas_ng.middleware.CASMiddleware',
 ]
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'django_cas_ng.backends.CASBackend',
+    # 'django_cas_ng.backends.CASBackend',
 )
 
 # for testing
-CAS_SERVER_URL = 'https://django-cas-ng-demo-server.herokuapp.com/cas/'
-CAS_VERSION = '3'
+# CAS_SERVER_URL = 'https://django-cas-ng-demo-server.herokuapp.com/cas/'
+# CAS_VERSION = '3'
 
 # for CAS Authentication
 # CAS_SERVER_URL = 'https://fed.princeton.edu/cas/'

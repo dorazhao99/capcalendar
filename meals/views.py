@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from meals.models import *
@@ -18,6 +19,8 @@ def index(request):
 # STUDENT
 #------------------------------------------------------------------------------#
 # returns the meals for the current day
+# @login_required
+# @member_only
 def current_day(request):
     day = datetime.datetime.today().weekday()
     if day == 5 or day == 6:
@@ -45,6 +48,8 @@ def current_day(request):
     return HttpResponse(template.render(context, request))
 
 # returns for selected days of the week
+# @login_required
+# @member_only
 def day_meal(request, day):
     lunch = Items.objects.filter(day_id=day, meal_id=0)
     if len(lunch) > 1:
@@ -71,6 +76,8 @@ def day_meal(request, day):
 # ADMIN
 #------------------------------------------------------------------------------#
 # returns the meals for the current day
+# @login_required
+# @staff_only
 def staff_current_day(request):
     day = datetime.datetime.today().weekday()
     if day == 5 or day == 6:
@@ -98,6 +105,8 @@ def staff_current_day(request):
     return HttpResponse(template.render(context, request))
 
 # returns for selected days of the week
+# @login_required
+# @staff_only
 def staff_meals(request, day):
     lunch = Items.objects.filter(day_id=day, meal_id=0)
     if len(lunch) > 1:
@@ -121,6 +130,8 @@ def staff_meals(request, day):
     }
     return HttpResponse(template.render(context, request))
 
+# @login_required
+# @staff_only
 def add_item(request):
     if request.method == 'POST':
         form = ItemForm(request.POST)
@@ -138,6 +149,8 @@ def add_item(request):
 
     return render(request, 'meals/add.html', {'form': form})
 
+# @login_required
+# @staff_only
 def edit_item(request, day, meal):
     object = Items.objects.filter(day_id=day, meal_id=meal)
     instance = get_object_or_404(Items, id=object[0].id)

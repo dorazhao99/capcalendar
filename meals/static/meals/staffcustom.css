@@ -7,10 +7,6 @@
 } */
 
 .root {
-  background-color: #CA7062;
-}
-
-.headerClass {
   background-color: #F4F3ED;
 }
 
@@ -20,7 +16,6 @@
   align-content: center;
   justify-content: center;
 }
-
 .headerLine {
   display: none;
   @media (min-width: 550px) {
@@ -55,20 +50,22 @@
   font-family: 'Merriweather', serif;
   font-weight: 700;
   font-size: 20px;
+  margin-right: 1em;
 }
 .list-group-flush .list-group-item {
   background-color: #F4F3ED;
 }
 .menu {
   min-height: 250px;
-  padding-bottom: 4em;
-  background-color: #F4F3ED;
+  margin-bottom: 4em;
+  @media (min-width: 550px) {
+    margin: 0 0 8em 0;
+  }
 }
 .image {
-  width: 600px;
-  height: auto;
-  @media (max-width: 550px) {
-    display: none;
+  @media (min-width: 550px) {
+    width: 600px;
+    height: auto;
   }
 }
 .timeWrapper {
@@ -76,18 +73,18 @@
   margin: 0 0 4em 0;
   display: flex;
   flex-direction: row;
-  height: 500px;
-  @media (min-width: 550px) {
+  @viewport(min-width: 550px) {
+    height: 500px;
   }
 }
 .imageWrapper {
-  @media (min-width: 550px) {
+  @viewport(min-width: 550px) {
     margin: 2em 2em 2em 2em;
   }
 }
 .textWrapper {
   margin: 2em 2em 2em 2em;
-  @media(min-width: 550px) {
+  @viewport(min-width: 550px) {
     margin: 5em 2em 2em 2em;
   }
 }
@@ -102,10 +99,22 @@
   font-size: 20px;
   color: #F4F3ED;
 }
+
+.btn-primary {
+  border-radius: 15px;
+  padding: 4px 20px 4px 20px;
+  background-color: #CA7062;;
+  color: #F4F3ED;
+  border-width: 0px;
+}
+
+.btn-primary:hover {
+  background-color: #a65b50;
+}
+
 a {
   color:black;
 }
-
 a:hover {
   color: #CA7062;
   text-decoration: none;

@@ -9,10 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
 
-  <body>
-    <div class = "image">
-      <br>
-      <img class = "menutitle" src = "/static/meals/images/menutitle.svg">
+  <body class = "root">
+    <div class = "headerClass">
+      <div class = "headerTitle">
+        <div class = "headerLine">
+          <hr class = "line" />
+        </div>
+        <div class="title">
+          MENU
+        </div>
+        <div class = "headerLine">
+          <hr class = "line" />
+        </div>
+      </div>
       <div class = "heading">
         <p class = "days">
           <a href = "/meals/0">
@@ -59,8 +68,6 @@
         <br>
       </div>
     </div>
-    <br>
-    <br>
     <div class = "menu">
       <div class = "container">
         <div class="row align-items-start" >
@@ -77,7 +84,7 @@
           <div class="col-sm-2">
           </div>
           <div class="col-sm-5">
-            <class = "mealtitle"> DINNER </span>
+            <span class = "mealtitle"> DINNER </span>
             <div class = "affix">
               <ul class="list-group list-group-flush">
                 {% for item in dinner_list %}
@@ -87,6 +94,25 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class = "timeWrapper">
+      <div class = "imageWrapper">
+        <img class = "image" src = "{% static 'meals/images/menu.png' %}" />
+      </div>
+      <div class = "textWrapper">
+        <p class = "textTitle"> Meal Times </p>
+        <span class = "mealText">
+          Breakfast (Monday-Friday):
+            <div style="margin: -1em 0 0 2em">
+              <br /> Hot: 8:00am-9:30am;
+              <br /> Continental: 9:30am-11:30am
+            </div>
+          <p /> <p />
+          Lunch (Monday-Friday): 11:30am-1:30pm <p />
+          Dinner: 6:00pm-7:30pm <p />
+          Brunch (Saturday-Sunday): 11:30am-1:30pm <p />
+        </span>
       </div>
     </div>
     <!-- Scripts -->
