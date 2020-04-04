@@ -10,6 +10,27 @@
   background-color: #CA7062;
 }
 
+.navbarCustom {
+  padding-top: 2em;
+  background-color: #F4F3ED;
+}
+
+.navbar-brand {
+  padding-left: 60px;
+  padding-right: 50vw;
+}
+
+.brand {
+  color: #CA7062;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.navLink {
+  padding-right: 2em;
+}
+
 .headerClass {
   background-color: #F4F3ED;
 }
@@ -31,9 +52,11 @@
     width: 40%;
   }
 }
+
 .line {
   color: red;
 }
+
 .title {
   font-family: 'Merriweather', serif;
   text-align: center;
@@ -41,29 +64,36 @@
   font-size: 60px;
   padding: 2% 0 2% 0;
 }
+
 .days{
   text-align: center;
   font-size:20px;
 }
+
 .affix {
   font-family: 'Merriweather', serif;
 }
+
 .days {
   font-family: 'Merriweather', serif;
 }
+
 .mealtitle {
   font-family: 'Merriweather', serif;
   font-weight: 700;
   font-size: 20px;
 }
+
 .list-group-flush .list-group-item {
   background-color: #F4F3ED;
 }
+
 .menu {
   min-height: 250px;
   padding-bottom: 4em;
   background-color: #F4F3ED;
 }
+
 .image {
   width: 600px;
   height: auto;
@@ -71,42 +101,64 @@
     display: none;
   }
 }
+
 .timeWrapper {
   background-color: #CA7062;
   margin: 0 0 4em 0;
   display: flex;
   flex-direction: row;
-  height: 500px;
+  height: 350px;
   @media (min-width: 550px) {
   }
 }
+
 .imageWrapper {
   @media (min-width: 550px) {
     margin: 2em 2em 2em 2em;
   }
 }
+
 .textWrapper {
   margin: 2em 2em 2em 2em;
+  padding: 2em 0 0 3em;
   @media(min-width: 550px) {
     margin: 5em 2em 2em 2em;
   }
 }
+
 .textTitle {
   font-family: 'Merriweather', serif;
   font-weight: 700;
   font-size: 40px;
   color: #F4F3ED;
 }
+
 .mealText {
   font-family: 'Merriweather', serif;
   font-size: 20px;
   color: #F4F3ED;
 }
+
 a {
   color:black;
+  font-family: 'Merriweather', serif;
 }
 
 a:hover {
   color: #CA7062;
   text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar-brand {
+    padding-left: 10px;
+    padding-right: 10vw;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .navbar-brand {
+    padding-left: 10px;
+    padding-right: 10vw;
+  }
 }

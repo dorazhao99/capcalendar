@@ -10,6 +10,37 @@
   </head>
 
   <body class = "root">
+    <nav class="navbar navbar-expand-lg navbar-light navbarCustom">
+      <a class="navbar-brand" href="#">
+        <span class = "brand"> CAP & GOWN </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">
+            <span class = "navLink" > Menu </span>
+            <span class="sr-only">(current)</span>
+          </a>
+          <a class="nav-item nav-link" href="#">
+            <span class = "navLink" >
+               Social
+             </span>
+           </a>
+          <a class="nav-item nav-link" href="#">
+            <span class = "navLink" >
+              Intramurals
+            </span>
+          </a>
+          <a class="nav-item nav-link" href="#">
+            <span class = "navLink" >
+               Logout
+             </span>
+           </a>
+        </div>
+      </div>
+    </nav>
     <div class = "headerClass">
       <div class = "headerTitle">
         <div class = "headerLine">
@@ -97,9 +128,6 @@
       </div>
     </div>
     <div class = "timeWrapper">
-      <div class = "imageWrapper">
-        <img class = "image" src = "{% static 'meals/images/menu.png' %}" />
-      </div>
       <div class = "textWrapper">
         <p class = "textTitle"> Meal Times </p>
         <span class = "mealText">
@@ -113,6 +141,9 @@
           Dinner: 6:00pm-7:30pm <p />
           Brunch (Saturday-Sunday): 11:30am-1:30pm <p />
         </span>
+      </div>
+      <div class = "imageWrapper">
+        <img class = "image" src = "{% static 'meals/images/menu.png' %}" />
       </div>
     </div>
     <!-- Scripts -->

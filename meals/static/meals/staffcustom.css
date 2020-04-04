@@ -63,7 +63,9 @@
   }
 }
 .image {
+  display: inline;
   @media (min-width: 550px) {
+    display: flex;
     width: 600px;
     height: auto;
   }
